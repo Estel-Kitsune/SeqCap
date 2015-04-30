@@ -1,6 +1,6 @@
-How to run the pipeline?
+*** How to run the pipeline? ***
 
-1- Run the script "pipeline_setting.pl". If you just type 2./pipeline_setting.pl" you will get hel information:
+1- Run the script "pipeline_setting.pl". If you just type "./pipeline_setting.pl" you will get hel information:
 
  This script must be run before the pipeline (snakemake). The arguments are as followed
 
@@ -16,3 +16,20 @@ Ex. : ./pipeline_setting.pl --project My_Project --ref my_reference.protein.fast
 2- Go into your project directory (created with the previous script)
 
 3- Type "snakemake"
+
+
+*** What does the pipeline do? ***
+
+1- Do the "ref proteome versus ref proteome" blastp search (except if it has been done before) -> tabular blastp output file
+
+2- Run the "get_low_copy.py" script on this blastp output file -> list of protein names.
+
+3- Run the "parsGff3.py" script on the reference GFF3 file -> list of protein names.
+
+4- Run the "extract_fasta_from_list.pl" script. It uses the 2 lists of protein names -> fasta file of selected protein sequences
+
+5- If 2 "de novo" transcriptome, blastn search of transcriptome 1 against transcriptome 2 -> list of selected nucleotide sequences from transcriptome 1 (that have good blast hits in the other transcriptome)
+
+6- Blastx search of transcriptome/selected nucleotide sequences against selected reference protein sequences -> blastx tabular output file.
+
+[7- Run parseBLASTtable.py]
