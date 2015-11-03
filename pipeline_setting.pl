@@ -114,7 +114,7 @@ exit(0);
 
 sub print_error {
     print "\n This script must be run before the pipeline (snakemake). The arguments are as followed\n\n";
-    print " --ref file\t\t The reference protein FASTA file [COMPULSORY]\n --trans file1 file2\t One or more transcriptome(s) nucleotide fasta file(s) [COMPULSORY]\n --project name\t\t A name for your project [COMPULSORY]\n --gff file\t\t The GFF3 file of your reference genome (from Phytozome) [COMPULSORY]\n --script folder\t The folder that contains all the secondary scripts [COMPULSORY]\n --refblast file\t A \"ref versus ref\" blastp tabular output\n\n";
+    print " --ref <file>\t\t The reference protein FASTA file [COMPULSORY]\n --trans <file1> <file2>\t One or more transcriptome(s) nucleotide fasta file(s) [COMPULSORY]\n --project <name>\t\t A name for your project [COMPULSORY]\n --gff <file>\t\t The GFF3 file of your reference genome (from Phytozome) [COMPULSORY]\n --script <directory>\t The directory that contains all the secondary scripts [COMPULSORY]\n --refblast <file>\t A \"ref versus ref\" blastp tabular output\n\n";
     print "Ex. : ./pipeline_setting.pl --project My_Project --ref my_reference.protein.fasta --trans my_new_transcriptome.fasta my_other_new_transcriptome.fasta --gff my_ref_proteome.gff --script my_script_folder\n\n";
     exit(0);
 }
