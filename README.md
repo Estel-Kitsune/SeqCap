@@ -1,6 +1,6 @@
 # How to run the pipeline
 
-1.) Run the script "pipeline_setting.pl". 
+**1.)** Run the script "pipeline_setting.pl". 
 
 If you just type "./pipeline_setting.pl" you will get the following information:
 
