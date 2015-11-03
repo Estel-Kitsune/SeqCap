@@ -1,6 +1,6 @@
 # How to run the pipeline
 
-**1.)** Run the script "pipeline_setting.pl". 
+1.) Run the script "pipeline_setting.pl". 
 
 If you just type "./pipeline_setting.pl" you will get the following information:
 
@@ -19,21 +19,21 @@ Ex. : ./pipeline_setting.pl --project My_Project --ref my_reference.protein.fast
 
 2.) Go into your project directory (created with the previous script)
 
-3- Type "snakemake"
+3.) Type "snakemake"
 
 
-*** What does the pipeline do? ***
+# What does the pipeline do?
 
-1- Do the "ref proteome versus ref proteome" blastp search (except if it has been done before) -> tabular blastp output file
+1. Do the "ref proteome versus ref proteome" blastp search (except if it has been done before) -> tabular blastp output file
 
-2- Run the "get_low_copy.py" script on this blastp output file -> list of protein names.
+1. Run the "get_low_copy.py" script on this blastp output file -> list of protein names.
 
-3- Run the "parsGff3.py" script on the reference GFF3 file -> list of protein names.
+1. Run the "parsGff3.py" script on the reference GFF3 file -> list of protein names.
 
-4- Run the "extract_fasta_from_list.pl" script. It uses the 2 lists of protein names -> fasta file of selected protein sequences
+1. Run the "extract_fasta_from_list.pl" script. It uses the 2 lists of protein names -> fasta file of selected protein sequences
 
-5- If 2 "de novo" transcriptome, blastn search of transcriptome 1 against transcriptome 2 -> list of selected nucleotide sequences from transcriptome 1 (that have good blast hits in the other transcriptome)
+1. If two "de novo" transcriptomes are used, a blastn search of transcriptome 1 against transcriptome 2 will be done and produce a list of sequences from transcriptome 1 that have good blast hit to a sequence in transcriptome 2.
 
-6- Blastx search of transcriptome/selected nucleotide sequences against selected reference protein sequences -> blastx tabular output file.
+1. Blastx search of transcriptome/selected nucleotide sequences against selected reference protein sequences -> blastx tabular output file.
 
 [7- Run parseBLASTtable.py]
