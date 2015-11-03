@@ -1,4 +1,4 @@
-*** How to run the pipeline? ***
+# How to run the pipeline
 
 1- Run the script "pipeline_setting.pl". If you just type "./pipeline_setting.pl" you will get hel information:
 
