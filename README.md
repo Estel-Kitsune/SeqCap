@@ -1,6 +1,6 @@
 # How to run the pipeline
 
-1. Run the script "pipeline_setting.pl". 
+1.) Run the script "pipeline_setting.pl". 
 
 If you just type "./pipeline_setting.pl" you will get the following information:
 
@@ -17,7 +17,7 @@ If you just type "./pipeline_setting.pl" you will get the following information:
 Ex. : ./pipeline_setting.pl --project My_Project --ref my_reference.protein.fasta --trans my_new_transcriptome.fasta my_other_new_transcriptome.fasta --gff my_ref_proteome.gff --script my_script_folder
 ```
 
-2. Go into your project directory (created with the previous script)
+2.) Go into your project directory (created with the previous script)
 
 3- Type "snakemake"
 
